@@ -47,25 +47,26 @@ TABLESPACE pg_default;
 ALTERAR TABLA SI EXISTE public.datos_api
     PROPIETARIO de postgres;
 
-3 . Si no se encuentra instalado virtualenv, procedemos a instalarlo:
+3.- Guardar todo el proyecto dentro de una carpeta llamada api_user.
+4 . Si no se encuentra instalado virtualenv, procedemos a instalarlo:
 instalación de pip virtualenv
-4 . Creamos el entorno virtual:
+5 . Creamos el entorno virtual:
 python -m virtualenv venv
-5 . activar el entorno virtual:
+6 . activar el entorno virtual:
 .\venv\Scripts\activar
-6 . Si aparece el error enable.ps1 porque la ejecución de scripts está deshabilitada en este sistema:
+7 . Si aparece el error enable.ps1 porque la ejecución de scripts está deshabilitada en este sistema:
 Vaya al menú de Windows y busque PowerShell.
 Una vez en el powerShell escribe el siguiente comando:
 Lista Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned -Force
-7.- Abrir el ejecutar y escribir gpedit.msc, luego ir a Plantillas administrativas->Componentes de windows y buscar windows powerShell, una vez seleccionamos dicha opción nos vamos a la parte derecha y buscamos la opción "Activar la ejecución de scripts" y la abrimos, una vez dentro buscamos la opción Habilitada y en opciones buscamos la opción "Permitir solo scripts firmados", aplicamos los cambios y lo cerramos.
-8 . Volvemos al código de Visual Studio y ejecutamos el entorno virtual.
+8.- Abrir el ejecutar y escribir gpedit.msc, luego ir a Plantillas administrativas->Componentes de windows y buscar windows powerShell, una vez seleccionamos dicha opción nos vamos a la parte derecha y buscamos la opción "Activar la ejecución de scripts" y la abrimos, una vez dentro buscamos la opción Habilitada y en opciones buscamos la opción "Permitir solo scripts firmados", aplicamos los cambios y lo cerramos.
+9 . Volvemos al código de Visual Studio y ejecutamos el entorno virtual.
 .\venv\Scripts\activar
-9 . Listamos todos los paquetes que tenemos instalados:
+10 . Listamos todos los paquetes que tenemos instalados:
 lista de pipas
-10 . Istalamos flask, flask-cors, psycopg2, python-depair, python-dotenv:
+11 . Istalamos flask, flask-cors, psycopg2, python-depair, python-dotenv:
 pip install flask flask-cors psycopg2 desacoplamiento de python python-dotenv
-11 . Hacer correr el programa:
+12 . Hacer correr el programa:
 pitón .\src\app.py
 
 Para ejecutar las apis se sugiere utilizar postman, las direcciones son las siguientes:
